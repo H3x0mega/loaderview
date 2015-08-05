@@ -20,9 +20,71 @@ android {
     }
 }
 
-/*def siteUrl = ''      // Homepage URL of the library
-def gitUrl = ''   // Git repository URL
-group = 'h3x0mega.loaderview'           // Maven Group ID for the artifact
+/** ---------- Maven ---------- **/
+
+def siteUrl = 'https://github.com/H3x0mega/loaderview'      // Homepage URL of the library
+def gitUrl = 'https://github.com/H3x0mega/loaderview.git'   // Git repository URL
+group = 'h3x0mega.loaderview'                               // Maven Group ID for the artifact
+
+install {
+    repositories.mavenInstaller {
+        // This generates the POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+
+                name 'The LoaderView shows an indeterminate ProgressBar while you load content on the background'
+                url siteUrl
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'h3x0mega'
+                        name 'Francois'
+                        email 'francois186@gmail.com'
+                    }
+                }
+
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+/** ---------- Bintray ---------- **/
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('bintray.properties').newDataInputStream())
@@ -35,9 +97,11 @@ bintray {
         repo = 'maven'
         name = 'LoaderView'
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        publish = true
     }
-}*/
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
