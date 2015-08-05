@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoaderView">
+        <attr name="error_image" format="reference"/>
+
+        <attr name="error_message" format="string"/>
+        <attr name="loader_message" format="string"/>
+
+        <attr name="loader_color" format="color"/>
+        <attr name="loader_message_text_color" format="color"/>
+        <attr name="error_message_text_color" format="color"/>
+        <attr name="button_text_color" format="color"/>
+    </declare-styleable>
+</resources>

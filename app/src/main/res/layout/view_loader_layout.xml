@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent">
+
+    <!-- Progress Bar -->
+    <RelativeLayout
+        android:id="@+id/progress_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="@dimen/progress_bar_size"
+            android:layout_height="@dimen/progress_bar_size"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/loader_spacing"
+            android:indeterminate="true"/>
+
+        <TextView
+            android:id="@+id/progress_message"
+            android:layout_below="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/default_loading"/>
+
+    </RelativeLayout>
+
+    <!-- Error -->
+    <RelativeLayout
+        android:id="@+id/error_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:alpha="0">
+
+        <ImageView
+            android:src="@drawable/ic_emoticon_sad"
+            android:id="@+id/error_image"
+            android:contentDescription="@string/error_image_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/error_image"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/loader_spacing"
+            android:text="@string/default_error"/>
+
+        <Button
+            android:id="@+id/try_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/error_message"
+            android:layout_marginBottom="@dimen/loader_spacing"
+            android:text="@string/try_again"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
