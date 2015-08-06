@@ -21,7 +21,7 @@ android {
 
 def siteUrl = 'https://github.com/H3x0mega/loaderview'      // Homepage URL of the library
 def gitUrl = 'https://github.com/H3x0mega/loaderview.git'   // Git repository URL
-group = 'com.h3x0mega'                                      // Maven Group ID for the artifact
+group = 'com.h3x0mega.androidbits'                          // Maven Group ID for the artifact
 version = '0.1'                                             // Library version
 
 install {
