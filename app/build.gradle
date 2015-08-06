@@ -2,9 +2,6 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-//Library version
-version = '0.1'
-
 android {
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
@@ -24,7 +21,8 @@ android {
 
 def siteUrl = 'https://github.com/H3x0mega/loaderview'      // Homepage URL of the library
 def gitUrl = 'https://github.com/H3x0mega/loaderview.git'   // Git repository URL
-group = 'h3x0mega.loaderview'                               // Maven Group ID for the artifact
+group = 'com.h3x0mega'                                      // Maven Group ID for the artifact
+version = '0.1'                                             // Library version
 
 install {
     repositories.mavenInstaller {
@@ -47,7 +45,6 @@ install {
                     developer {
                         id 'h3x0mega'
                         name 'Francois'
-                        email 'francois186@gmail.com'
                     }
                 }
 
@@ -59,9 +56,6 @@ install {
             }
         }
     }
-}
-
-dependencies {
 }
 
 task sourcesJar(type: Jar) {
