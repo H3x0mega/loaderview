@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+    }
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'LoaderView'
+
+    publishedGroupId = 'com.h3x0mega.androidbits'
+    libraryName = 'LoaderView'
+    artifact = 'loader-view'
+
+    libraryDescription = 'The LoaderView shows an indeterminate ProgressBar while you take another action on the background. This view lets you handle the failure and success scenarios of the loading process by showing a friendly error message (with a \'Try Again\' button), or by removing the view completely.'
+
+    siteUrl = 'https://github.com/H3x0mega/loaderview'
+    gitUrl = 'https://github.com/H3x0mega/loaderview.git'
+
+    libraryVersion = '0.1'
+
+    developerId = 'H3x0mega'
+    developerName = 'Francois Jeanneret'
+    developerEmail = ''
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ['Apache-2.0']
+}
+
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/bintrayv1.gradle'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.1'
+}
