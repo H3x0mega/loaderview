@@ -7,11 +7,10 @@ The LoaderView shows an indeterminate ```ProgressBar``` while you load content o
 - Customizable messages, colors and drawables that can be set programmatically or in your XML layout
 
 ### Usage
-Just add
+Just add the following line to your ```build.gradle``` file
 ```
 compile 'com.h3x0mega.androidbits:loader-view:0.1'
 ```
-to your ```build.gradle``` file
 
 ### Sample
 
