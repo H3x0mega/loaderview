@@ -9,11 +9,13 @@ The LoaderView shows an indeterminate ```ProgressBar``` while you load content o
 ### Usage
 Just add
 ```
-    compile 'com.h3x0mega.androidbits:loader-view:0.1'
+compile 'com.h3x0mega.androidbits:loader-view:0.1'
 ```
 to your ```build.gradle``` file
 
-Please check the [sample app](https://github.com/H3x0mega/android-bits) at the android-bits repository to learn how the LoaderView works!
+### Sample
+
+To know how to use the LoaderView, check the [sample app](https://github.com/H3x0mega/android-bits) at the android-bits repository!
 
 <p align="center"><img src="http://zippy.gfycat.com/ClearcutEminentAustraliancurlew.gif" width="300" height="442"/></p>
 
