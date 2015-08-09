@@ -1,5 +1,5 @@
 # LoaderView
-The LoaderView shows an indeterminate ```ProgressBar``` while you load content on the background. This view lets you handle the failure and success scenarios of the loading process by showing a friendly error message (with a 'Try Again' button), or by removing the view completely.
+The LoaderView shows an indeterminate ```ProgressBar``` while you take another action on the background. This view lets you handle the failure and success scenarios of the loading process by showing a friendly error message (with a 'Try Again' button), or by removing the view completely.
 
 ### Features
 - A retry action callback
