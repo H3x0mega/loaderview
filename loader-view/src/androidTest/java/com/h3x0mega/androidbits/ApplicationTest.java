@@ -1,4 +1,4 @@
-package h3x0mega.loaderview;
+package com.h3x0mega.androidbits;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

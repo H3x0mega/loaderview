@@ -1,4 +1,4 @@
-package h3x0mega.loaderview.views;
+package com.h3x0mega.androidbits;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -19,8 +19,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import h3x0mega.loaderview.R;
 
 /**
  * View including a progress bar and an error layout to be used in asynchronous operation
